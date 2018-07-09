@@ -20,8 +20,7 @@ namespace CompleteProject
         }
 
         void Awake ()
-        {       
-            
+        {               
             // Create a layer mask for the floor layer.
             floorMask = LayerMask.GetMask ("Floor");
 

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using UnitySampleAssets.CrossPlatformInput;
 
 namespace CompleteProject
 {
-    public class PlayerShooting : MonoBehaviour
+    public class PlayerShooting : NetworkBehaviour
     {
         public int damagePerShot = 20;                  // The damage inflicted by each bullet.
         public float timeBetweenBullets = 0.15f;        // The time between each shot.
@@ -22,6 +23,12 @@ namespace CompleteProject
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 
 
+        void Start()
+        {
+            if(!isLocalPlayer)
+                Destroy(this);
+        }
+        
         void Awake ()
         {
             // Create a layer mask for the Shootable layer.
