@@ -27,5 +27,10 @@ namespace CompleteProject
             // Smoothly interpolate between the camera's current position and it's target position.
             transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
         }
+
+        public void SetTarget(Transform target)
+        {
+            this.target = target;
+        }
     }
 }

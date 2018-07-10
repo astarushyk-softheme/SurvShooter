@@ -18,13 +18,14 @@ namespace CompleteProject
 
 
         void Spawn ()
-        {
+        {       
+                 
             // If the player has no health left...
-            if(playerHealth.currentHealth <= 0f)
-            {
+            // if(playerHealth.currentHealth <= 0f)
+            // {
                 // ... exit the function.
-                return;
-            }
+                // return;
+            // }
 
             // Find a random index between zero and one less than the number of spawn points.
             int spawnPointIndex = Random.Range (0, spawnPoints.Length);
